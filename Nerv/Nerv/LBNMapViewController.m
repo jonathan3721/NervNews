@@ -30,10 +30,14 @@ static NSString* const mapToAustinSegue = @"MapToAustinSegue";
     CLLocationDegrees northDegree = 30.2669;
     CLLocationDegrees westDegree = -97.7428;
     LBNMapAnnotation* austinAnnotation = [[LBNMapAnnotation alloc] initWithCoordinate:CLLocationCoordinate2DMake(northDegree, westDegree)];
+    CLLocationDegrees northportDegree = 45.5236;
+    CLLocationDegrees westportDegree = -122.6750;
+    LBNMapAnnotation* portlandAnnotation = [[LBNMapAnnotation alloc] initWithCoordinate: CLLocationCoordinate2DMake(northportDegree, westportDegree)];
     self.mapView.showsUserLocation = YES;
     self.mapView.delegate = self;
     
     [self.mapView addAnnotation:austinAnnotation];
+    [self.mapView addAnnotation:portlandAnnotation];
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view{
